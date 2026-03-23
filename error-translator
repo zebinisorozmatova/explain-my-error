@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void explainError(string error) {
+    if (error.find("expected ';'") != string::npos) {
+        cout << "Xato: Siz ; qo‘yishni unutgansiz." << endl;
+    }
+    else {
+        cout << "Noma’lum xato, tekshirib ko‘ring." << endl;
+    }
+}
+
+int main() {
+    string err = "error: expected ';' before '}'";
+    explainError(err);
+    return 0;
+}
